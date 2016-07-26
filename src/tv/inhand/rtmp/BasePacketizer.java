@@ -37,7 +37,7 @@ abstract public class BasePacketizer {
 
     public BasePacketizer() throws IOException {
         localSocket = new LocalSocket();
-        dataQueue = new LinkedBlockingDeque<>(MAX_QUEUE_SIZE);
+        dataQueue = new LinkedBlockingDeque<Packet>(MAX_QUEUE_SIZE);
         this.is = new ParcelFileDescriptor.AutoCloseInputStream(localSocket.getReceiver());
     }
 

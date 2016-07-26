@@ -158,7 +158,7 @@ public class Session {
 		stop(1);
 	}
 
-	public void startPublisher(String streamName) throws IOException {
+	public void startPublisher(final String streamName) throws IOException {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
